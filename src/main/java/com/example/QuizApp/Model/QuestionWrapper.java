@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Question {
+public class QuestionWrapper {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Integer id;
@@ -21,9 +21,4 @@ public class Question {
     private String option2;
     private String option3;
     private String option4;
-    private String category;
-    private String rightAnswer;
-    private String difficultyLevel;
- 
-
 }

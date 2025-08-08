@@ -16,4 +16,25 @@ public class QuestionService {
 
         return repo.findAll();
     }
+
+    public List<Question> getQuestionByCategory(String question) {
+        return repo.findByCategory(question);
+    }
+
+
+
+    public String addData(Question question) {
+        repo.save(question);
+        return "data save successfully";
+    }
+
+    public boolean delete(int id) {
+        if (repo.existsById(id)) {
+            repo.deleteById(id);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
